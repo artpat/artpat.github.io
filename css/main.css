@@ -1,0 +1,109 @@
+body {
+    background-color: black;
+}
+
+.header {
+    height: 40px;
+    padding-top: 10px;
+}
+
+.header ul li {
+    color: #B9B9B9;
+    display: inline;
+}
+
+.header a {
+    color: #B9B9B9;
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #fff;
+}
+
+.logo {
+    padding-top: 20px;
+}
+
+#nav {
+    background-color: #fff;
+    height: 140px;
+    padding-top: 15px;
+}
+
+#nav .btn {
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #E68888;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    padding-top: 35px;
+    text-shadow: 1px 1px 2px #883A3A;
+}
+
+#nav .btn:hover {
+    background-color: #E68888;
+    border: 5px solid #FB9797;
+}
+
+.banner {
+    height: 500px;
+    background-image: url("http://templates.websitetemplatesonline.com/Bootstrap-Free-Template/img/bg-content.jpg");
+}
+
+.box a {
+    color: #E68888;
+}
+
+.box h1 {
+    font-size: 40px;
+    color: white;
+    text-align: right;
+}
+
+.box h1:first-letter {
+    color: #E68888;
+}
+
+.box h2 {
+    font-size: 30px;
+    color: white;
+    line-height: 50px;
+}
+
+.box h3 {
+    color: white;
+    font-size: 13px;
+}
+
+.box h4 {
+    font-size: 13px;
+    line-height: 17px;
+}
+
+.box p {
+    font-size: 15px;
+    color: #BABABA;
+    padding: 0 60px 0 10px;
+    border-left: 1px solid;
+}
+
+.box button a:link {
+    background-color: #E68888;
+    width: 100px;
+    height: 35px;
+    border: none;
+    font-size: 13px;
+    font- color: white;
+    text-decoration: none;
+}
+
+.box button a:hover {
+    background-color: #E68888;
+    width: 100px;
+    height: 35px;
+    border: none;
+}
