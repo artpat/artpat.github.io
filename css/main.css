@@ -1,144 +1,127 @@
-body {
-    background-color: black;
-}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.header {
-    height: 40px;
-    padding-top: 10px;
-}
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+			font-size:14px;
+			line-height:2;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* 撐滿全螢幕高度 */
+            overflow: hidden;
+        }
+		h1 {font-size:36px;}
+		h3 {font-size:24px;}
+		h6 {font-size:18px;}
 
-.header ul li {
-    color: #B9B9B9;
-    display: inline;
-}
+        .header {
+            height: 150px;
+            background-color:black; 
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            flex-shrink: 0;
 
-.header a {
-    color: #B9B9B9;
-    padding: 0 5px;
-    text-decoration: none;
-}
+        }
 
-.header a:hover {
-    color: #fff;
-}
+        header div {display:block}
+        header div span {opacity:0.4;}
+        header i {font-size:18px; display: inline-block; transform: rotate(-30deg);
+    margin-left: -10px;}
+        p.intro {line-height:1.9; font-weight:bold;}
+        p.intro a {color:red;}
+        main span{font-weight:bold;}
+        main span.bg{background-color:rgba(128, 128, 128, 0.269); padding:0.5%;}
 
-.logo {
-    padding-top: 20px;
-}
+        .main-container {
+            display: flex;
+            flex: 1; 
+            overflow: hidden;
+        }
 
-#nav {
-    background-color: #fff;
-    height: 140px;
-    padding-top: 15px;
-}
+        /* 左 30% */
+        .sidebar {
+            width: 20%;
+            background-color: #ededed;
+            padding: 20px;
+            overflow-y: auto; /* 內容過長可捲動 */
+        }
 
-#nav .btn {
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #E68888;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    margin: 5px;
-    padding-top: 35px;
-    text-shadow: 1px 1px 2px #883A3A;
-}
+        /* 右 70% */
+        .content {
+            width: 80%;
+            background-color: #ffffff;
+            padding: 30px;
+            overflow-y: auto;
+        }
 
-#nav .btn:hover {
-    background-color: #E68888;
-    border: 5px solid #FB9797;
-}
 
-.banner {
-    background-image: url("http://templates.websitetemplatesonline.com/Bootstrap-Free-Template/img/bg-content.jpg");
-    padding: 20px 20px;
-}
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        font-family: "Microsoft JhengHei", sans-serif;
+        font-size: 14px;
+    }
+    .grid-container a {color:red;}
+    .grid-container a:hover {color:black}
 
-.banner .img {
-    padding-left: 13%;
-    width: 1000px;
-}
+    /* 定義每一列 */
+    .grid-row {display: flex;width: 100%;  }
+    .grid-cell {
+        flex: 1;
+        padding: 10px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+    }
 
-.box a {
-    color: #E68888;
-}
 
-.box h1 {
-    font-size: 40px;
-    color: white;
-    text-align: right;
-}
+   .grid-row.header {
+        font-weight: bold;
+        background-color: black;
+        height:auto;
+        padding:0;
+    }
 
-.box h1:first-letter {
-    color: #E68888;
-}
+      @media screen and (max-width: 768px) {
+             main.content {width:100%;}
+            .main-container { flex-direction: column;}
+            .sidebar{display:none;}
+            .grid-row.header {display:none}
+        .grid-container {border-left: none;}
+        .header {height:80px;}
+        h1 {font-size:24px; line-height:24px;}
 
-.box h2 {
-    font-size: 30px;
-    color: white;
-    line-height: 20px;
-}
+        .grid-row {
+            flex-direction: column; /* 改為垂直排列 */
+            border-bottom: 8px solid #eee; /* 每一組資料間加入間隔感 */
+            border-left:1px solid #ccc; /* 加入左側邊框，形成卡片感 */
+        }
 
-.box p {
-    font-size: 15px;
-    color: #E0E0E0;
-    padding: 0 60px 0 10px;
-    border-left: 1px solid;
-}
+        .grid-cell {
+            display: flex;
+            justify-content: flex-start;
+            padding:0 15px;
+            width: auto;
+        }
 
-.box .p1 {
-    color: white;
-    font-size: 14px;
-    padding: 5px;
-}
+        .grid-cell.cell-title {font-weight:bold;}
 
-.box .p2 {
-    font-size: 14x;
-    line-height: 17px;
-    color: #878787;
-    padding: 5px;
-}
 
-.box .img {
-    margin: 10px 0;
-}
-
-.imgs li {
-    margin: 0 15px 15px 0;
-    list-style: none;
-}
-
-.box .btn1 {
-    background-color: #E68888;
-    width: 100px;
-    height: 35px;
-    border: none;
-    font-size: 13px;
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 10px 16px;
-    margin: 5px 0 30px 0;
-}
-
-.box .btn1:hover {
-    background-color: #D44C4C;
-}
-
-.box li {
-    list-style: circle;
-    padding: 5px;
-    color: #E68888;
-    font-size: 15px;
-}
-
-.line {
-    border-bottom: 1px solid #333;
-    margin: 15px 0;
-}
-
-footer {
-    background-color: white;
-    height: 80px;
-    padding-top: 20px;
-}
+        /* 透過偽元素在左側加入標題 */
+        .grid-cell::before {
+            font-weight: bold;
+            color: #888;
+            min-width: 100px;
+            display: inline-block;
+            font-size: 13px;
+        }
+    }

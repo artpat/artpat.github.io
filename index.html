@@ -1,49 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-<style type="text/css">
-	body{
-		width: 70%;
-		text-align: center;
-		margin:100px auto; 
-		font-family:Georgia,Serif;
-	}
-	h1{
-		color: black;
-		font-size: 30px;
-		font-weight: bold;		
-	}
-	a{
-		color: black;
-		font-size: 20px;
-		text-decoration: none;
-	}
-	a:hover{
-		text-decoration: underline;
-	}
-	.note{
-		color: #666;
-		margin-bottom: 20px;
-	}
-
-	footer{
-		color: #BABABA;
-		margin:100px;
-		font-size: 16px;
-	}
-</style>
-	<title>github</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>UI Component Layout - 楊婷雅</title>
 </head>
 <body>
-<div>
-<h1>HomeWork</h1>
-<HR>
-<a href="http://artpat.co.nf/grid/grid.html" target="_blank">CSS website</a><div class="note">work : whole CSS+HTML</div>
-<div><a href="http://artpat.co.nf/grid/grid-rwd.html" target="_blank">CSS RWD website</a><div class="note">work : whole CSS+HTML but float menu
-</div>
-<div><a href="http://artpat.co.nf/bootstrap/index.html" target="_blank">Bootstrap copy-site practice</a><div class="note">work : whole CSS+HTML but imgs</div></div>
-<div><a href="http://artpat.co.nf/UI/index.html" target="_blank">UI design and CSS achieve</a><div class="note">work : whole CSS+HTML+PS UI but banner slideshow</div>
-<footer>2016 by Patricia</footer>
+
+    <!-- Header 組件 -->
+    <header class="header">
+        <div>
+        <h1 title="0919 332 844">楊婷雅 / Patricia Yang <i class="bi bi-hand-index"></i></h1>        
+        <span>15+ years of senior design experience</span>
+    </div>
+    </header>
+
+    <!-- 主內容區 -->
+    <div class="main-container">
+        
+        <!-- 左側導覽 (30%) -->
+        <aside class="sidebar">
+			<p class="intro">
+				UI Components設計規劃 <br>
+				Theme System視覺制定<br>
+				視覺前端設計與製作<br>
+				CMS更新 <br>
+			<a title="0919 332 844" href="mailto:patricia.designer@gmail.com">聯繫我</a>
+		</p>
+			<br>
+            <h3>重要經歷</h3>
+			<p>*系統ERP之UI/UX設計規劃</p>
+            <p>*優派海外國際網站更新</p>
+			<p>*光寶Led部門網站統合建置</p>
+            <p>*露天拍賣活動設計</p>
+            <p>*學承電腦活動點擊反饋</p>
+        </aside>
+
+        <!-- 右側主內容 (70%) -->
+        <main class="content">
+            <h3>專業簡表</h3>
+			<div class="grid-container">
+				<!-- 表頭 -->
+				<div class="grid-row header">
+					<div class="grid-cell cell-title">網站工作經驗簡表</div>
+					<div class="grid-cell cell-unit">作品代表單位</div>
+					<div class="grid-cell cell-tech">相關技術</div>
+					<div class="grid-cell cell-tool">工具使用經驗</div>
+					<div class="grid-cell cell-content">內容</div>
+				</div>
+
+				<!-- 第1列 -->
+				<div class="grid-row">
+					<div class="grid-cell cell-title">1.視覺設計</div>
+					<div class="grid-cell cell-unit">世騰公司簡介(近期)</div>
+					<div class="grid-cell cell-tech">Photoshop / Illustrator</div>
+					<div class="grid-cell cell-tool">Adobe</div>
+					<div class="grid-cell cell-content">配合公司需求</div>
+				</div>
+
+				<!-- 第2列 -->
+				<div class="grid-row">
+					<div class="grid-cell cell-title">2.前端架構與layout</div>
+					<div class="grid-cell cell-unit">光寶 / <a href="https://www.cerpass.com.tw/zh-TW/index" target="_blank">世騰</a> / 鑫盈</div>
+					<div class="grid-cell cell-tech">HTML / CSS / Bootstrap / JS(套用)</div>
+					<div class="grid-cell cell-tool">Visual Studio Code</div>
+					<div class="grid-cell cell-content">皆具RWD</div>
+				</div>
+
+				<!-- 第3列 -->
+				<div class="grid-row">
+					<div class="grid-cell cell-title">3.CMS維護</div>
+					<div class="grid-cell cell-unit">優派(ViewSonic) 海外據點</div>
+					<div class="grid-cell cell-tech">PHP(Magento)</div>
+					<div class="grid-cell cell-tool">WordPress / Wix</div>
+					<div class="grid-cell cell-content">視覺設計 / 更新</div>
+				</div>
+
+				<!-- 第4列 -->
+				<div class="grid-row">
+					<div class="grid-cell cell-title">4.活動視覺網頁及素材</div>
+					<div class="grid-cell cell-unit">露天拍賣</div>
+					<div class="grid-cell cell-tech">Photoshop / Illustrator</div>
+					<div class="grid-cell cell-tool">Adobe</div>
+					<div class="grid-cell cell-content">視覺設計</div>
+				</div>
+
+				<!-- 第5列 -->
+				<div class="grid-row">
+					<div class="grid-cell cell-title">5.SEO追蹤</div>
+					<div class="grid-cell cell-unit">學承電腦</div>
+					<div class="grid-cell cell-tech">Google Analytics (非維護)</div>
+					<div class="grid-cell cell-tool"></div>
+					<div class="grid-cell cell-content">成效檢視調整</div>
+				</div>
+
+				<!-- 第6列 -->
+				<div class="grid-row">
+					<div class="grid-cell cell-title">6.UI與theme設計</div>
+					<div class="grid-cell cell-unit">內部ERP</div>
+					<div class="grid-cell cell-tech">CSS</div>
+					<div class="grid-cell cell-tool">Angular + DevExtreme</div>
+					<div class="grid-cell cell-content">色調及元件規劃設計</div>
+				</div>
+
+				<!-- 第7列 -->
+				<div class="grid-row">
+					<div class="grid-cell cell-title">7.相關設計</div>
+					<div class="grid-cell cell-unit">(配合需求)</div>
+					<div class="grid-cell cell-tech">Photoshop / Illustrator</div>
+					<div class="grid-cell cell-tool">Adobe</div>
+					<div class="grid-cell cell-content">簡介 / 名片 / 傳單</div>
+				</div>
+		    </div>
+
+			<br>
+
+			<h3>特殊工作經歷</h3>
+			<p><span class="bg">【光寶】- 前端+後端的溝通</span></p>
+			<p><span>工作簡述:</span> <br>
+				部門招商網站設計公司介入後，對於資料庫的對接；網站資料分類彙整等內容幾乎無法連結。入職後得迅速進入狀況，解決跨部門溝通及資料蒐集等各項問題，僅在試用3個月中，解決了耗時已久的網站建置，但理解到自己的任務已解，部門對於我的職務後續規劃及安排有所變動，因此在試用結束後，順利和平的自我提出到下個職場。
+			</p>
+			<br>
+
+			<p><span class="bg">【優派】- 多語系的CMS網站維護</span></p>
+			<p><span>工作簡述:</span> <br>
+				身處在Marcom部門，每次更新都必須更新到10處以上的國家。雖然CMS語系自動翻譯功能強大，但是觀察到有些國家官方語言仍為英文，因此著手彙整，合併英文語系國家，讓網站更新的內容更精準的觸擊使用者。
+			</p>
+			<br>			
+
+			<p><span class="bg">【學承】- 視覺與點擊反饋</span></p>
+			<p><span>工作簡述:</span> <br>
+				雖然這間公司已經不付存在，但我在職期間針對課程設計之電子活動DM，向來是部門回饋最佳。判定的依據是點擊率與填表率，是難得將視覺數據化體驗的工作經驗。
+			</p>
+			<br>
+
+			<p><span class="bg">【樹德科技】- 接觸SEO</span></p>
+			<p><span>工作簡述:</span> <br>
+				這間公司也不付存在! 我的工作任務是將所有的關鍵字分別在meta與alt中加入。這是我第一次接觸SEO的工作，雖然簡單暴力，但是十分有效，對於十多年前的網路環境十份受用，也是這份工作，讓我理解SEO的部分概念!
+			</p>
+			<br>
+
+			<h3>重點資歷</h3>
+			<h6>**股份有限公司(在職) </h6>
+			<p><span class="bg">資深設計師</span></p>
+			<p><span>工作簡述:</span> <br>
+				1.因應系統更新、維護與製作產生之UI/UX設計規劃 <br>
+				2.配合公司需求產出視覺設計，多為傳單；名片，甚至是網路活動頁面 <br>
+				3.網站內容更新。由於使用Angular，所以由MIS建置完網站後更新
+			</p>
+
+			<br>
+
+			<h6>優派國際(ViewSonic)</h6>
+			<p><span class="bg">網頁設計師</span></p>
+			<p>
+            <span>工作簡述:</span> <br>
+				1.負責海外網站內容更新，因此多用電子郵件與英國與德國等主管聯繫工作 <br>
+				2.網站banner設計更新
+			</p>
+			<br>
+
+            <h6>露天拍賣</h6>
+			<p><span class="bg">網頁設計師</span></p>
+			<p>
+            <span>工作簡述:</span> <br>
+				1.網站活動頁面設計製作<br>
+				2.網站banner設計更新<br>
+				3.UI設計更新
+			</p><br>
+
+			<h6>學承電腦</h6>
+			<p><span class="bg">網頁設計師</span></p>
+			<p>
+            <span>工作簡述:</span> <br>
+				1.網站活動頁面設計製作<br>
+				2.網站banner設計更新<br>
+				3.UI設計更新<br>
+			</p>
+			<br>
+
+			<h6>大里資訊</h6>
+			<p><span class="bg">網頁設計師</span></p>
+			<p>
+            <span>工作簡述:</span> <br>
+				1.各項標案視覺設計<br>
+				2.專案設計維護<br>				
+			</p>
+
+        </main>
+
+    </div>
 
 </body>
 </html>
