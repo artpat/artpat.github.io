@@ -1,127 +1,255 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: "Microsoft JhengHei", sans-serif;
-			font-size:14px;
-			line-height:2;
-            display: flex;
-            flex-direction: column;
-            height: 100vh; /* 撐滿全螢幕高度 */
-            overflow: hidden;
-        }
-		h1 {font-size:36px;}
-		h3 {font-size:24px;}
-		h6 {font-size:18px;}
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
 
-        .header {
-            height: 150px;
-            background-color:black; 
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-            flex-shrink: 0;
+h1 { font-size: 36px; }
+h3 { font-size: 24px; }
+h6 { font-size: 18px; }
 
-        }
+.header {
+    height: 150px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
 
-        header div {display:block}
-        header div span {opacity:0.4;}
-        header i {font-size:18px; display: inline-block; transform: rotate(-30deg);
-    margin-left: -10px;}
-        p.intro {line-height:1.9; font-weight:bold;}
-        p.intro a {color:red;}
-        main span{font-weight:bold;}
-        main span.bg{background-color:rgba(128, 128, 128, 0.269); padding:0.5%;}
+header div { display: block; }
+header div span { opacity: 0.4; }
+header i {
+    font-size: 18px;
+    display: inline-block;
+    transform: rotate(-30deg);
+    margin-left: -10px;
+}
 
-        .main-container {
-            display: flex;
-            flex: 1; 
-            overflow: hidden;
-        }
+p.intro { line-height: 1.9; font-weight: bold; }
+p.intro a { color: red; }
+main span { font-weight: bold; }
+main span.bg { background-color: rgba(128, 128, 128, 0.269); padding: 0.5%; }
 
-        /* 左 30% */
-        .sidebar {
-            width: 20%;
-            background-color: #ededed;
-            padding: 20px;
-            overflow-y: auto; /* 內容過長可捲動 */
-        }
+.main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
 
-        /* 右 70% */
-        .content {
-            width: 80%;
-            background-color: #ffffff;
-            padding: 30px;
-            overflow-y: auto;
-        }
+/* 左側 20% */
+.sidebar {
+    width: 20%;
+    background-color: #ededed;
+    padding: 20px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
 
+/* 右側 80% */
+.content {
+    width: 80%;
+    background-color: #ffffff;
+    padding: 30px;
+    overflow-y: auto;
+}
 
-    .grid-container {
-        display: flex;
+/* ===== Grid Table ===== */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    font-family: "Microsoft JhengHei", sans-serif;
+    font-size: 14px;
+}
+
+.grid-container a { color: red; }
+.grid-container a:hover { color: black; }
+
+.grid-row {
+    display: flex;
+    width: 100%;
+}
+
+.grid-cell {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.grid-row.header {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    height: auto;
+    padding: 0;
+}
+
+/* ===== 縮圖 ===== */
+.thumb-img {
+    height: 100px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.thumb-img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.2s ease-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ===== RWD：768px 以下 ===== */
+@media screen and (max-width: 768px) {
+
+    /* 版面：改為垂直疊排，sidebar 隱藏 */
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .main-container {
         flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
         width: 100%;
-        border-top: 1px solid #ccc;
-        border-left: 1px solid #ccc;
-        font-family: "Microsoft JhengHei", sans-serif;
+        padding: 16px;
+    }
+
+    /* Header 縮小 */
+    .header {
+        height: auto;
+        padding: 14px 16px;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    h3 { font-size: 18px; }
+    h6 { font-size: 15px; }
+
+    header div span { font-size: 12px; }
+
+    /* ===== Grid：手機版改卡片式 ===== */
+    .grid-container {
+        border-left: none;
+        border-top: none;
+    }
+
+    /* 桌面版 header row 隱藏 */
+    .grid-row.header {
+        display: none;
+    }
+
+    /* 每列變成卡片 */
+    .grid-row {
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        overflow: hidden;
+    }
+
+    .grid-cell {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 8px 12px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .grid-cell:last-child {
+        border-bottom: none;
+    }
+
+    /* 用 ::before 顯示欄位標題（中文） */
+    /* 專業簡表 */
+    .grid-cell.cell-title::before  { content: "項目"; }
+    .grid-cell.cell-unit::before   { content: "單位"; }
+    .grid-cell.cell-tech::before   { content: "技術"; }
+    .grid-cell.cell-tool::before   { content: "工具"; }
+    .grid-cell.cell-content::before { content: "內容"; }
+
+    .grid-cell::before {
+        font-weight: bold;
+        color: #888;
+        min-width: 42px;
+        font-size: 12px;
+        flex-shrink: 0;
+        padding-top: 2px;
+    }
+
+    /* 第一個 grid（無 class 的 header row 上方那段） */
+    .grid-cell.cell-title {
+        font-weight: bold;
+        background-color: #f5f5f5;
         font-size: 14px;
     }
-    .grid-container a {color:red;}
-    .grid-container a:hover {color:black}
 
-    /* 定義每一列 */
-    .grid-row {display: flex;width: 100%;  }
-    .grid-cell {
-        flex: 1;
-        padding: 10px;
-        border-right: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        display: flex;
-        align-items: center;
+    /* ===== 圖片縮圖：手機版改為換行捲動 ===== */
+    .grid-cell > div,
+    .grid-row .grid-cell[style] {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
     }
 
-
-   .grid-row.header {
-        font-weight: bold;
-        background-color: black;
-        height:auto;
-        padding:0;
+    .thumb-img {
+        height: 72px;
+        width: auto;
     }
-
-      @media screen and (max-width: 768px) {
-             main.content {width:100%;}
-            .main-container { flex-direction: column;}
-            .sidebar{display:none;}
-            .grid-row.header {display:none}
-        .grid-container {border-left: none;}
-        .header {height:80px;}
-        h1 {font-size:24px; line-height:24px;}
-
-        .grid-row {
-            flex-direction: column; /* 改為垂直排列 */
-            border-bottom: 8px solid #eee; /* 每一組資料間加入間隔感 */
-            border-left:1px solid #ccc; /* 加入左側邊框，形成卡片感 */
-        }
-
-        .grid-cell {
-            display: flex;
-            justify-content: flex-start;
-            padding:0 15px;
-            width: auto;
-        }
-
-        .grid-cell.cell-title {font-weight:bold;}
-
-
-        /* 透過偽元素在左側加入標題 */
-        .grid-cell::before {
-            font-weight: bold;
-            color: #888;
-            min-width: 100px;
-            display: inline-block;
-            font-size: 13px;
-        }
-    }
+}

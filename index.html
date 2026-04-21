@@ -18,10 +18,10 @@
     </header>
 
     <!-- 主內容區 -->
-    <div class="main-container">
+    <div class="main-container">	
         
         <!-- 左側導覽 (30%) -->
-        <aside class="sidebar">
+        <aside class="sidebar">			
 			<p class="intro">
 				UI Components設計規劃 <br>
 				Theme System視覺制定<br>
@@ -40,7 +40,59 @@
 
         <!-- 右側主內容 (70%) -->
         <main class="content">
-            <h3>專業簡表</h3>
+			<h1 style="text-align: center;">具備視覺設計到前端靜態網站的能手!</h1>
+			<!-- 標題列 -->
+			 在職工作日常:
+		<div class="grid-row header">
+			<div class="grid-cell cell-tech">系統簡述</div>
+			<div class="grid-cell cell-tool">設計流程</div>
+			<div class="grid-cell cell-content">技術克服</div>
+		</div>
+
+		<!-- 內容列 -->
+		<div class="grid-row">
+			<!-- 系統簡述內容 (對應 cell-tech) -->
+			<div class="grid-cell cell-tech">
+				1. ASP.NET Web Forms架構<br>
+				2. 採Devexpress UI Component<br>
+				3. End User為軟體購買者與系統服務維護者
+			</div>
+
+			<!-- 設計流程內容 (對應 cell-tool) -->
+			<div class="grid-cell cell-tool">
+				1. 了解系統架構<br>
+				2. Design System規劃<br>
+				3. 簡單訪問End User使用情境與習慣
+			</div>
+
+			<!-- 技術克服內容 (對應 cell-content) -->
+			<div class="grid-cell cell-content">
+				1. 理解程式語言結構<br>
+				2. Devexpress UI Component特性為渲染後才生成對應屬性，
+  設計必須讓視覺在不可變動元件中變得合理，讓End User使用目的清晰明確， 譬如按鈕的視覺暗示，表格的層級區分...<br>
+				3. 拆解Component類型與應用情境，避免跑版
+			</div>
+		</div>
+
+		
+
+		<div class="grid-row" style="text-align: center;">
+    <div class="grid-cell" style="display:flex; justify-content:center; gap: 12px; padding: 15px;">
+        <!-- 直接用 this.src 把當前圖片路徑傳給大圖視窗 -->
+        <img src="./imgs/01.jpg" onclick="openModal(this.src)" class="thumb-img">
+        <img src="./imgs/02.jpg" onclick="openModal(this.src)" class="thumb-img">
+        <img src="./imgs/03.jpg" onclick="openModal(this.src)" class="thumb-img">
+        <img src="./imgs/04.jpg" onclick="openModal(this.src)" class="thumb-img">
+        <img src="./imgs/05.jpg" onclick="openModal(this.src)" class="thumb-img">
+    </div>
+</div>
+
+<!-- 彈出大圖容器 (保持不變) -->
+<div id="imageModal" class="modal-overlay" onclick="closeModal()">
+    <img id="modalImg" src="" class="modal-content">
+</div>
+
+			<h3>專業簡表</h3>
 			<div class="grid-container">
 				<!-- 表頭 -->
 				<div class="grid-row header">
@@ -192,6 +244,24 @@
         </main>
 
     </div>
+
+
+
+	<script>
+    function openModal(src) {
+        var modal = document.getElementById('imageModal');
+        var modalImg = document.getElementById('modalImg');
+        
+        modal.style.display = 'flex'; // 顯示彈出層
+        modalImg.src = src;           // 帶入原圖路徑
+        
+        console.log("已點擊圖片，路徑為：" + src); // 用於檢查是否有點擊到
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
