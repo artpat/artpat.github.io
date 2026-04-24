@@ -1,267 +1,367 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/main.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>UI Component Layout - 楊婷雅</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARTPAT DESIGN｜品牌視覺 × 數位行銷 × 電商設計</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-    <!-- Header 組件 -->
-    <header class="header">
-        <div>
-        <h1 title="0919 332 844">楊婷雅 / Patricia Yang <i class="bi bi-hand-index"></i></h1>        
-        <span>15+ years of senior design experience</span>
+<!-- ========== HERO ========== -->
+<section class="hero-section">
+  <div class="hero-bg-img" aria-hidden="true"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center min-vh-hero">
+
+      <div class="col-lg-6 hero-left">
+        <div class="badge-row mb-3">
+          <span class="tag-pill">品牌視覺</span>
+          <span class="tag-sep">×</span>
+          <span class="tag-pill">數位行銷</span>
+          <span class="tag-sep">×</span>
+          <span class="tag-pill">電商設計</span>
+        </div>
+        <h1 class="hero-title">
+          用設計創造價值，<br/>
+          讓品牌<em>被看見，被選擇</em>
+        </h1>
+        <p class="hero-sub">品牌視覺設計師｜從策略到設計，提升品牌影響力與轉換力</p>
+
+        <div class="service-tags mb-4">
+          <span class="stag"><i class="bi bi-shield-check"></i> 品牌策略思維</span>
+          <span class="stag"><i class="bi bi-eye"></i> 視覺設計執行</span>
+          <span class="stag"><i class="bi bi-phone"></i> 行銷素材製作</span>
+          <span class="stag"><i class="bi bi-cart3"></i> 電商視覺整合</span>
+        </div>
+
+        <a href="#contact" class="btn btn-hero">聯絡我</a>
+      </div>
+
+      <!-- Right col is empty — person/deco live in the background image -->
+      <div class="col-lg-6 hero-right position-relative">
+        <!-- About card -->
+        <div class="about-card">
+          <p class="about-card-title">關於我</p>
+          <p class="about-card-text">專注品牌視覺與數位設計逾達 6 年，擅長從品牌策略出發，結合設計美學與行銷思維，協助品牌在各種平台上建立一致的視覺體驗，並有效提升品牌價值與轉換率。</p>
+        </div>
+
+        <!-- Tools card -->
+        <div class="tools-card">
+          <p class="tools-label">常用工具</p>
+          <div class="tools-row">
+            <span class="tool-item figma"><i class="bi bi-pentagon-fill"></i> Figma</span>
+            <span class="tool-item ps">Ps Photoshop</span>
+            <span class="tool-item ai">Ai Illustrator</span>
+            <span class="tool-item gpt">🤖 ChatGPT</span>
+          </div>
+        </div>
+
+        <!-- Type card -->
+        <div class="type-card">
+          <span class="type-aa">Aa</span>
+          <span class="dot d1"></span>
+          <span class="dot d2"></span>
+          <span class="dot d3"></span>
+        </div>
+
+        <!-- Logo A card -->
+        <div class="logo-a-card">
+          <span>A</span>
+        </div>
+      </div>
+
     </div>
-    </header>
+  </div>
+</section>
 
-    <!-- 主內容區 -->
-    <div class="main-container">	
-        
-        <!-- 左側導覽 (30%) -->
-        <aside class="sidebar">			
-			<p class="intro">
-				UI Components設計規劃 <br>
-				Theme System視覺制定<br>
-				視覺前端設計與製作<br>
-				CMS更新 <br>
-			<a title="0919 332 844" href="mailto:patricia.designer@gmail.com">聯繫我</a>
-		</p>
-			<br>
-            <h3>重要經歷</h3>
-			<p>*系統ERP之UI/UX設計規劃</p>
-            <p>*優派海外國際網站更新</p>
-			<p>*光寶Led部門網站統合建置</p>
-            <p>*露天拍賣活動設計</p>
-            <p>*學承電腦活動點擊反饋</p>
-        </aside>
-
-        <!-- 右側主內容 (70%) -->
-        <main class="content">
-			<h1 style="text-align: center;">具備視覺設計到前端靜態網站的能手!</h1>
-			<!-- 標題列 -->
-			 在職工作日常:
-		<div class="grid-row header">
-			<div class="grid-cell cell-tech">系統簡述</div>
-			<div class="grid-cell cell-tool">設計流程</div>
-			<div class="grid-cell cell-content">技術克服</div>
-		</div>
-
-		<!-- 內容列 -->
-		<div class="grid-row">
-			<!-- 系統簡述內容 (對應 cell-tech) -->
-			<div class="grid-cell cell-tech">
-				1. ASP.NET Web Forms架構<br>
-				2. 採Devexpress UI Component<br>
-				3. End User為軟體購買者與系統服務維護者
-			</div>
-
-			<!-- 設計流程內容 (對應 cell-tool) -->
-			<div class="grid-cell cell-tool">
-				1. 了解系統架構<br>
-				2. Design System規劃<br>
-				3. 簡單訪問End User使用情境與習慣
-			</div>
-
-			<!-- 技術克服內容 (對應 cell-content) -->
-			<div class="grid-cell cell-content">
-				1. 理解程式語言結構<br>
-				2. Devexpress UI Component特性為渲染後才生成對應屬性，
-  設計必須讓視覺在不可變動元件中變得合理，讓End User使用目的清晰明確， 譬如按鈕的視覺暗示，表格的層級區分...<br>
-				3. 拆解Component類型與應用情境，避免跑版
-			</div>
-		</div>
-
-		
-
-		<div class="grid-row" style="text-align: center;">
-    <div class="grid-cell" style="display:flex; justify-content:center; gap: 12px; padding: 15px;">
-        <!-- 直接用 this.src 把當前圖片路徑傳給大圖視窗 -->
-        <img src="./imgs/01.jpg" onclick="openModal(this.src)" class="thumb-img">
-        <img src="./imgs/02.jpg" onclick="openModal(this.src)" class="thumb-img">
-        <img src="./imgs/03.jpg" onclick="openModal(this.src)" class="thumb-img">
-        <img src="./imgs/04.jpg" onclick="openModal(this.src)" class="thumb-img">
-        <img src="./imgs/05.jpg" onclick="openModal(this.src)" class="thumb-img">
+<!-- ========== SERVICES ========== -->
+<section class="services-section">
+  <div class="container">
+    <h2 class="section-center-title">我能幫你的事</h2>
+    <div class="services-grid">
+      <div class="srv-item">
+        <div class="srv-icon pink"><i class="bi bi-star-fill"></i></div>
+        <span>品牌形象一致</span>
+      </div>
+      <div class="srv-item">
+        <div class="srv-icon purple"><i class="bi bi-search"></i></div>
+        <span>網站體驗優化</span>
+      </div>
+      <div class="srv-item">
+        <div class="srv-icon orange"><i class="bi bi-printer-fill"></i></div>
+        <span>印刷品質把關</span>
+      </div>
+      <div class="srv-item">
+        <div class="srv-icon teal"><i class="bi bi-person-lines-fill"></i></div>
+        <span>整合行銷思維</span>
+      </div>
+      <div class="srv-item">
+        <div class="srv-icon red"><i class="bi bi-gear-fill"></i></div>
+        <span>客製化解決方案</span>
+      </div>
+      <div class="srv-item">
+        <div class="srv-icon lavender"><i class="bi bi-heart-fill"></i></div>
+        <span>專業團隊支援</span>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== SELECTED CASES ========== -->
+<section class="cases-section py-5">
+  <div class="container">
+    <div class="section-header d-flex justify-content-between align-items-end mb-2">
+      <div>
+        <h2 class="section-title">精選案例</h2>
+        <p class="section-sub">從策略到設計，創造品牌價值</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Case 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="case-card" data-lightbox="cases" data-img="./imgs/menu.jpg" data-title="日式餐廳菜單">
+          <div class="case-img-wrap">
+            <img src="./imgs/menus.jpg" alt="日式餐廳菜單" class="case-thumb" style="object-position: 15% 52%"/>
+            <div class="case-overlay">
+              <span class="view-big-btn">看大圖 <i class="bi bi-zoom-in"></i></span>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tags">
+              <span class="ctag pink">品牌設計</span>
+              <span class="ctag blue">行銷設計</span>
+            </div>
+            <h3 class="case-title">日式餐廳菜單</h3>
+            <p class="case-desc">用餐前先營造視覺氛圍！。用精緻編排設計提升質感與品牌印象，吸引顧客目光增加點餐意願度。</p>
+            <button class="case-link lightbox-trigger" data-img="./imgs/menu.jpg" data-title="菜單設計">看大圖 →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="case-card" data-lightbox="cases" data-img="./imgs/image01.png" data-title="保養品電商品牌設計">
+          <div class="case-img-wrap">
+            <img src="./imgs/image01.png" alt="保養品電商品牌設計" class="case-thumb" style="object-position: 50% 52%"/>
+            <div class="case-overlay">
+              <span class="view-big-btn">看大圖 <i class="bi bi-zoom-in"></i></span>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tags">
+              <span class="ctag pink">品牌設計</span>
+              <span class="ctag green">電商設計</span>
+              <span class="ctag purple2">視覺整合</span>
+            </div>
+            <h3 class="case-title">保養品電商品牌設計</h3>
+            <p class="case-desc">從品牌定位到電商視覺設計，優化商品頁與活動頁，提升品牌感與銷售氛圍。</p>
+            <button class="case-link lightbox-trigger" data-img="./imgs/image01.png" data-title="保養品電商品牌設計">看大圖 →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="case-card" data-lightbox="cases" data-img="./imgs/sys.jpg" data-title="系統UI/UX設計">
+          <div class="case-img-wrap">
+            <img src="./imgs/syss.jpg" alt="系統UI/UX設計" class="case-thumb" style="object-position: 85% 52%"/>
+            <div class="case-overlay">
+              <span class="view-big-btn">看大圖 <i class="bi bi-zoom-in"></i></span>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tags">
+              <span class="ctag pink">品牌設計</span>
+              <span class="ctag purple2">視覺整合</span>
+              <span class="ctag blue">行銷設計</span>
+            </div>
+            <h3 class="case-title">系統UI/UX設計</h3>
+            <p class="case-desc">建立一致品牌視覺系統，在使用系統實提升使用體驗好感，促進強化品牌識別。</p>
+            <button class="case-link lightbox-trigger" data-img="./imgs/sys.jpg" data-title="系統UI/UX設計">看大圖 →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== MARKETING EXAMPLES ========== -->
+<section class="marketing-section py-5">
+  <div class="container">
+    <div class="section-header d-flex justify-content-between align-items-end mb-2">
+      <div>
+        <h2 class="section-title">命理品牌設計建議</h2>
+        <p class="section-sub">當代設計風格能增加品牌信任度，拉攏更潛在群眾</p>
+      </div>
+      <!-- <a href="#" class="view-all-link">查看更多設計作品 →</a> -->
+    </div>
+
+    <div class="marketing-grid">
+      <div class="mkt-item lightbox-trigger" data-img="./imgs/c-red.png" data-title="網站設計">
+        <div class="mkt-img-wrap">
+          <img src="./imgs/c-reds.jpg" alt="網站設計" style="object-position:10% 70%"/>
+          <div class="mkt-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p> <span class="case-title">紅色網站</span> <br>以溫暖紅色調呈現，帶出親切與信任感，讓使用者一眼就感到安心與熟悉喔！</p>
+      </div>
+      <div class="mkt-item lightbox-trigger" data-img="./imgs/c-redm.png" data-title="網站設計">
+        <div class="mkt-img-wrap">
+          <img src="./imgs/c-redms.jpg" alt="網站設計" style="object-position:30% 70%"/>
+          <div class="mkt-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p> <span class="case-title">紅色網頁版</span> <br>整體版面清楚易讀，搭配重點色彩引導視線，讓操作流程更加順暢又直覺！</p>
+      </div>
+      <div class="mkt-item lightbox-trigger" data-img="./imgs/c-bk.png"" data-title="網站設計">
+        <div class="mkt-img-wrap">
+          <img src="./imgs/c-bks.jpg" alt="網站設計" style="object-position:50% 70%"/>
+          <div class="mkt-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p> <span class="case-title">黑色網站</span> <br>充滿神祕的引導力量! <br>採用深色設計風格，營造專業與神秘感，引導使用者聚焦重要資訊更有質感！</p>
+      </div>
+      <div class="mkt-item lightbox-trigger" data-img="./imgs/c-bkm.png" data-title="網站設計">
+        <div class="mkt-img-wrap">
+          <img src="./imgs/c-bkms.jpg" alt="網站設計" style="object-position:70% 70%"/>
+          <div class="mkt-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p> <span class="case-title">黑色網頁版</span> <br>介面俐落且對比鮮明，強化重點資訊呈現，帶來沉穩又高級的瀏覽體驗！</p>
+      </div>
+      <div class="mkt-item lightbox-trigger" data-img="./imgs/edm.png" data-title="網站宣傳EDM">
+        <div class="mkt-img-wrap">
+          <img src="./imgs/c-edms.jpg" alt="網站宣傳EDM" style="object-position:90% 70%"/>
+          <div class="mkt-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p> <span class="case-title">網站宣傳EDM比較</span> <br>透過不同風格對比呈現，各自展現品牌特色，幫助快速找到最適合的設計方向！</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BRAND EXTENSION ========== -->
+<section class="brand-section py-5">
+  <div class="container">
+    <div class="mb-4">
+      <h2 class="section-title">品牌延伸設計</h2>
+      <p class="section-sub">打造形象一致性，強化品牌記憶</p>
+    </div>
+
+    <div class="brand-grid">
+      <div class="brand-item lightbox-trigger" data-img="./imgs/brand01.jpg" data-title="公司簡介">
+        <div class="brand-img-wrap">
+          <img src="./imgs/brand01s.jpg" alt="公司簡介" style="object-position:8% 85%"/>
+          <div class="brand-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p>公司簡介</p>
+      </div>
+      <div class="brand-item lightbox-trigger" data-img="./imgs/brand02.jpg" data-title="型錄DM">
+        <div class="brand-img-wrap">
+          <img src="./imgs/brand02s.jpg" alt="型錄DM" style="object-position:28% 85%"/>
+          <div class="brand-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p>型錄DM</p>
+      </div>
+      <div class="brand-item lightbox-trigger" data-img="./imgs/brand03.jpg" data-title="活動立牌">
+        <div class="brand-img-wrap">
+          <img src="./imgs/brand03s.jpg" alt="活動立牌" style="object-position:50% 85%"/>
+          <div class="brand-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p>活動立牌</p>
+      </div>
+      <div class="brand-item lightbox-trigger" data-img="./imgs/brand04.jpg" data-title="辦公室牆面形象">
+        <div class="brand-img-wrap">
+          <img src="./imgs/brand04s.jpg" alt="辦公室牆面形象" style="object-position:72% 85%"/>
+          <div class="brand-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p>辦公室牆面形象</p>
+      </div>
+      <div class="brand-item lightbox-trigger" data-img="./imgs/brand05.jpg" data-title="牆面廣告">
+        <div class="brand-img-wrap">
+          <img src="./imgs/brand05s.jpg" alt="牆面廣告" style="object-position:92% 85%"/>
+          <div class="brand-overlay"><i class="bi bi-zoom-in"></i></div>
+        </div>
+        <p>牆面廣告</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SKILLS + CTA ========== -->
+<section class="skills-cta-section py-5">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+
+      <!-- Skills -->
+      <div class="col-lg-6">
+        <h2 class="section-title mb-4">專業技能</h2>
+        <div class="skill-icons-row mb-4">
+          <div class="skill-icon-item">
+            <div class="ski-icon"><i class="bi bi-bullseye"></i></div>
+            <span>品牌視覺設計</span>
+          </div>
+          <div class="skill-icon-item">
+            <div class="ski-icon"><i class="bi bi-phone"></i></div>
+            <span>數位行銷設計</span>
+          </div>
+          <div class="skill-icon-item">
+            <div class="ski-icon"><i class="bi bi-layout-sidebar"></i></div>
+            <span>UI / UX 設計</span>
+          </div>
+          <div class="skill-icon-item">
+            <div class="ski-icon"><i class="bi bi-cart3"></i></div>
+            <span>AI 輔助設計</span>
+          </div>
+        </div>
+        <div class="tools-list-row">
+          <span class="tool-badge figma-b"><i class="bi bi-pentagon-fill"></i> Figma</span>
+          <span class="tool-badge ps-b">Ps Photoshop</span>
+          <span class="tool-badge ai-b">Ai Illustrator</span>
+          <span class="tool-badge gpt-b">🤖 ChatGPT</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="col-lg-6">
+        <div class="cta-card h-100">
+          <div class="cta-deco-circle"></div>
+          <h3 class="cta-title">讓我們一起，<br/>用設計創造品牌價值！</h3>
+          <p class="cta-sub">不論是品牌設計、行銷素材或網站專案，歡迎與我聊聊！</p>
+          <a href="mailto:hello@artpat.design" class="btn btn-cta" id="contact">聯絡我 💬</a>
+          <div class="cta-plant">🪴</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span class="footer-brand"><strong>A</strong> ARTPAT DESIGN</span>
+    <span class="footer-copy">© 2026 Artpat Design. All Rights Reserved.</span>
+  </div>
+</footer>
+
+<!-- ========== LIGHTBOX MODAL ========== -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <div class="lightbox-container">
+    <button class="lightbox-close" id="lightboxClose"><i class="bi bi-x-lg"></i></button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" id="lightboxImg"/>
+    </div>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
 </div>
 
-<!-- 彈出大圖容器 (保持不變) -->
-<div id="imageModal" class="modal-overlay" onclick="closeModal()">
-    <img id="modalImg" src="" class="modal-content">
-</div>
-
-			<h3>專業簡表</h3>
-			<div class="grid-container">
-				<!-- 表頭 -->
-				<div class="grid-row header">
-					<div class="grid-cell cell-title">網站工作經驗簡表</div>
-					<div class="grid-cell cell-unit">作品代表單位</div>
-					<div class="grid-cell cell-tech">相關技術</div>
-					<div class="grid-cell cell-tool">工具使用經驗</div>
-					<div class="grid-cell cell-content">內容</div>
-				</div>
-
-				<!-- 第1列 -->
-				<div class="grid-row">
-					<div class="grid-cell cell-title">1.視覺設計</div>
-					<div class="grid-cell cell-unit">世騰公司簡介(近期)</div>
-					<div class="grid-cell cell-tech">Photoshop / Illustrator</div>
-					<div class="grid-cell cell-tool">Adobe</div>
-					<div class="grid-cell cell-content">配合公司需求</div>
-				</div>
-
-				<!-- 第2列 -->
-				<div class="grid-row">
-					<div class="grid-cell cell-title">2.前端架構與layout</div>
-					<div class="grid-cell cell-unit">光寶 / <a href="https://www.cerpass.com.tw/zh-TW/index" target="_blank">世騰</a> / 鑫盈</div>
-					<div class="grid-cell cell-tech">HTML / CSS / Bootstrap / JS(套用)</div>
-					<div class="grid-cell cell-tool">Visual Studio Code / Claude / Copilot</div>
-					<div class="grid-cell cell-content">皆具RWD</div>
-				</div>
-
-				<!-- 第3列 -->
-				<div class="grid-row">
-					<div class="grid-cell cell-title">3.CMS維護</div>
-					<div class="grid-cell cell-unit">優派(ViewSonic) 海外據點</div>
-					<div class="grid-cell cell-tech">PHP(Magento)</div>
-					<div class="grid-cell cell-tool">WordPress / Wix</div>
-					<div class="grid-cell cell-content">視覺設計 / 更新</div>
-				</div>
-
-				<!-- 第4列 -->
-				<div class="grid-row">
-					<div class="grid-cell cell-title">4.活動視覺網頁及素材</div>
-					<div class="grid-cell cell-unit">露天拍賣</div>
-					<div class="grid-cell cell-tech">Photoshop / Illustrator / Figma</div>
-					<div class="grid-cell cell-tool">Adobe</div>
-					<div class="grid-cell cell-content">視覺設計</div>
-				</div>
-
-				<!-- 第5列 -->
-				<div class="grid-row">
-					<div class="grid-cell cell-title">5.SEO追蹤</div>
-					<div class="grid-cell cell-unit">學承電腦</div>
-					<div class="grid-cell cell-tech">Google Analytics (非維護)</div>
-					<div class="grid-cell cell-tool"></div>
-					<div class="grid-cell cell-content">成效檢視調整</div>
-				</div>
-
-				<!-- 第6列 -->
-				<div class="grid-row">
-					<div class="grid-cell cell-title">6.UI與theme設計</div>
-					<div class="grid-cell cell-unit">內部ERP</div>
-					<div class="grid-cell cell-tech">CSS</div>
-					<div class="grid-cell cell-tool">Angular + DevExtreme / Claude / Chatgpt</div>
-					<div class="grid-cell cell-content">色調及元件規劃設計</div>
-				</div>
-
-				<!-- 第7列 -->
-				<div class="grid-row">
-					<div class="grid-cell cell-title">7.相關設計</div>
-					<div class="grid-cell cell-unit">(配合需求)</div>
-					<div class="grid-cell cell-tech">Photoshop / Illustrator</div>
-					<div class="grid-cell cell-tool">Adobe</div>
-					<div class="grid-cell cell-content">簡介 / 名片 / 傳單</div>
-				</div>
-		    </div>
-
-			<br>
-
-			<h3>特殊工作經歷</h3>
-			<p><span class="bg">【光寶】- 前端+後端的溝通</span></p>
-			<p><span>工作簡述:</span> <br>
-				部門招商網站設計公司介入後，對於資料庫的對接；網站資料分類彙整等內容幾乎無法連結。入職後得迅速進入狀況，解決跨部門溝通及資料蒐集等各項問題，僅在試用3個月中，解決了耗時已久的網站建置，但理解到自己的任務已解，部門對於我的職務後續規劃及安排有所變動，因此在試用結束後，順利和平的自我提出到下個職場。
-			</p>
-			<br>
-
-			<p><span class="bg">【優派】- 多語系的CMS網站維護</span></p>
-			<p><span>工作簡述:</span> <br>
-				身處在Marcom部門，每次更新都必須更新到10處以上的國家。雖然CMS語系自動翻譯功能強大，但是觀察到有些國家官方語言仍為英文，因此著手彙整，合併英文語系國家，讓網站更新的內容更精準的觸擊使用者。
-			</p>
-			<br>			
-
-			<p><span class="bg">【學承】- 視覺與點擊反饋</span></p>
-			<p><span>工作簡述:</span> <br>
-				雖然這間公司已經不付存在，但我在職期間針對課程設計之電子活動DM，向來是部門回饋最佳。判定的依據是點擊率與填表率，是難得將視覺數據化體驗的工作經驗。
-			</p>
-			<br>
-
-			<p><span class="bg">【樹德科技】- 接觸SEO</span></p>
-			<p><span>工作簡述:</span> <br>
-				這間公司也不付存在! 我的工作任務是將所有的關鍵字分別在meta與alt中加入。這是我第一次接觸SEO的工作，雖然簡單暴力，但是十分有效，對於十多年前的網路環境十份受用，也是這份工作，讓我理解SEO的部分概念!
-			</p>
-			<br>
-
-			<h3>重點資歷</h3>
-			<h6>**股份有限公司(在職) </h6>
-			<p><span class="bg">資深設計師</span></p>
-			<p><span>工作簡述:</span> <br>
-				1.因應系統更新、維護與製作產生之UI/UX設計規劃 <br>
-				2.配合公司需求產出視覺設計，多為傳單；名片，甚至是網路活動頁面 <br>
-				3.網站內容更新。由於使用Angular，所以由MIS建置完網站後更新
-			</p>
-
-			<br>
-
-			<h6>優派國際(ViewSonic)</h6>
-			<p><span class="bg">網頁設計師</span></p>
-			<p>
-            <span>工作簡述:</span> <br>
-				1.負責海外網站內容更新，因此多用電子郵件與英國與德國等主管聯繫工作 <br>
-				2.網站banner設計更新
-			</p>
-			<br>
-
-            <h6>露天拍賣</h6>
-			<p><span class="bg">網頁設計師</span></p>
-			<p>
-            <span>工作簡述:</span> <br>
-				1.網站活動頁面設計製作<br>
-				2.網站banner設計更新<br>
-				3.UI設計更新
-			</p><br>
-
-			<h6>學承電腦</h6>
-			<p><span class="bg">網頁設計師</span></p>
-			<p>
-            <span>工作簡述:</span> <br>
-				1.網站活動頁面設計製作<br>
-				2.網站banner設計更新<br>
-				3.UI設計更新<br>
-			</p>
-			<br>
-
-			<h6>大里資訊</h6>
-			<p><span class="bg">網頁設計師</span></p>
-			<p>
-            <span>工作簡述:</span> <br>
-				1.各項標案視覺設計<br>
-				2.專案設計維護<br>				
-			</p>
-
-        </main>
-
-    </div>
-
-
-
-	<script>
-    function openModal(src) {
-        var modal = document.getElementById('imageModal');
-        var modalImg = document.getElementById('modalImg');
-        
-        modal.style.display = 'flex'; // 顯示彈出層
-        modalImg.src = src;           // 帶入原圖路徑
-        
-        console.log("已點擊圖片，路徑為：" + src); // 用於檢查是否有點擊到
-    }
-
-    function closeModal() {
-        document.getElementById('imageModal').style.display = 'none';
-    }
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
